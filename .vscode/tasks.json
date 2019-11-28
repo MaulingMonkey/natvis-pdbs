@@ -26,5 +26,9 @@
             "label":    "cd crates/example-usage-metabuild && cargo +nightly-x86_64-msvc build",
             "command":  "cd crates/example-usage-metabuild && cargo +nightly-x86_64-msvc build",
         },
+        {
+            "label":    "cd crates/natvis-pdbs && cargo publish",
+            "command":  "cd crates/natvis-pdbs && cargo publish",
+        },
     ],
 }
