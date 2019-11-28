@@ -49,7 +49,7 @@ See [Recommended Reading](#recommended-reading) bellow for more information abou
 Add the following to your executable's Cargo.toml:
 ```toml
 [build-dependencies]
-natvis-pdbs = "0"
+natvis-pdbs = "1"
 ```
 
 And the following to your [build.rs]:
@@ -69,7 +69,7 @@ cargo-features = ["metabuild"]
 metabuild = ["natvis-pdbs"]
 
 [build-dependencies]
-natvis-pdbs = "0"
+natvis-pdbs = "1"
 ```
 
 
