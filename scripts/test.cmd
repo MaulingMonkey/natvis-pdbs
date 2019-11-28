@@ -1,4 +1,5 @@
 :: Main entry point
+@if defined CI set "PATH=%USERPROFILE%\.cargo\bin;%PATH%"
 @echo on
 @pushd "%~dp0.."
 cargo +stable   build --all || @exit /b 1
