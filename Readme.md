@@ -1,16 +1,15 @@
 # natvis-pdbs
 
 [![GitHub](https://img.shields.io/github/stars/MaulingMonkey/natvis-pdbs.svg?label=GitHub&style=social)](https://github.com/MaulingMonkey/natvis-pdbs)
-<!--[![Build status](https://ci.appveyor.com/api/projects/status/nyvlrelifcyjc1l1?svg=true)](https://ci.appveyor.com/project/MaulingMonkey/natvis-pdbs)-->
+[![Build status](https://ci.appveyor.com/api/projects/status/8lbwdphr2o4nm7wd?svg=true)](https://ci.appveyor.com/project/MaulingMonkey/natvis-pdbs)
 [![Crates.io](https://img.shields.io/crates/v/natvis-pdbs.svg)](https://crates.io/crates/natvis-pdbs)
 ![unsafe: no](https://img.shields.io/badge/unsafe-no-green.svg)
 ![rust: 1.39.0+](https://img.shields.io/badge/rust-1.39.0%2B-green.svg)
 [![Open issues](https://img.shields.io/github/issues-raw/MaulingMonkey/natvis-pdbs.svg)](https://github.com/MaulingMonkey/natvis-pdbs/issues)
 [![License](https://img.shields.io/crates/l/natvis-pdbs.svg)](https://github.com/MaulingMonkey/natvis-pdbs)
-[![Docs](https://docs.rs/natvis-pdbs/badge.svg)](https://docs.rs/natvis-pdbs/)
 [![dependency status](https://deps.rs/repo/github/MaulingMonkey/natvis-pdbs/status.svg)](https://deps.rs/repo/github/MaulingMonkey/natvis-pdbs)
 
-A [metabuild]/[build.rs] compatible crate to embed `.natvis` debug visualizer files into your executable's `.pdb`s, for ease of debugging.
+A [metabuild] / [build.rs] compatible crate to embed `.natvis` debug visualizer files into your executable's `.pdb`s, for ease of debugging.
 
 
 
