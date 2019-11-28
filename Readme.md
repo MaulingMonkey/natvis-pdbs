@@ -6,7 +6,7 @@
 ![unsafe: no](https://img.shields.io/badge/unsafe-no-green.svg)
 ![rust: 1.39.0+](https://img.shields.io/badge/rust-1.39.0%2B-green.svg)
 [![Open issues](https://img.shields.io/github/issues-raw/MaulingMonkey/natvis-pdbs.svg)](https://github.com/MaulingMonkey/natvis-pdbs/issues)
-[![License](https://img.shields.io/crates/l/natvis-pdbs.svg)](https://github.com/MaulingMonkey/natvis-pdbs)
+[![License](https://img.shields.io/crates/l/natvis_pdbs.svg)](https://github.com/MaulingMonkey/natvis-pdbs)
 [![dependency status](https://deps.rs/repo/github/MaulingMonkey/natvis-pdbs/status.svg)](https://deps.rs/repo/github/MaulingMonkey/natvis-pdbs)
 
 A [metabuild] / [build.rs] compatible crate to embed `.natvis` debug visualizer files into your executable's `.pdb`s, for ease of debugging.
