@@ -2,7 +2,7 @@
 
 [package]
 name = "natvis-pdbs"
-version = "0.0.0"
+version = "0.0.1"
 authors = ["MaulingMonkey <git@maulingmonkey.com>"]
 edition = "2018"
 description = "A metabuild/build.rs compatible crate to embed .natvis debug visualizer files into your executable's .pdbs, for ease of debugging."
