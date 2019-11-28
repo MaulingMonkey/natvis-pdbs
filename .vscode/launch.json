@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug example-usage-build-rs", "type": "cppvsdbg", "request": "launch",
+            "preLaunchTask": "cargo +stable-x86_64-msvc build",
+            "cwd": "${workspaceRoot}", "program": "${workspaceRoot}/target/debug/example-usage-build-rs.exe",
+            "internalConsoleOptions": "openOnSessionStart", "externalConsole": false,
+        },
+        {
+            "name": "Debug example-usage-metabuild", "type": "cppvsdbg", "request": "launch",
+            "preLaunchTask": "cd crates/example-usage-metabuild && cargo +nightly-x86_64-msvc build",
+            "cwd": "${workspaceRoot}", "program": "${workspaceRoot}/crates/example-usage-metabuild/target/debug/example-usage-metabuild.exe",
+            "internalConsoleOptions": "openOnSessionStart", "externalConsole": false,
+        },
+    ]
+}

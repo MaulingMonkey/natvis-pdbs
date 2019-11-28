@@ -1,0 +1,20 @@
+# https://doc.rust-lang.org/cargo/reference/manifest.html
+cargo-features = ["metabuild"]
+
+[workspace]
+
+[package]
+name = "example-usage-metabuild"
+version = "0.0.0"
+publish = false
+authors = ["MaulingMonkey <git@maulingmonkey.com>"]
+edition = "2018"
+metabuild = ["natvis-pdbs"]
+
+[dependencies]
+example-crate-with-natvis = { path = "../example-crate-with-natvis" }
+bugsalot = "0.1.4"
+
+[build-dependencies]
+natvis-pdbs = { path = "../natvis-pdbs" }
+

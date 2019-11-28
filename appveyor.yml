@@ -1,0 +1,9 @@
+install:
+  - scripts\install.cmd
+
+build: false
+
+test_script:
+  - scripts\test.cmd
+
+skip_tags: true

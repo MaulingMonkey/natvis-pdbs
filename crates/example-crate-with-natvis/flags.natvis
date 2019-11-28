@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+  <Type Name="example_crate_with_natvis::Flags">
+      <DisplayString ExcludeView="sparse">{*this,view(sparse)}</DisplayString>
+      <Expand>
+        <Item Name="bits"   ExcludeView="sparse">bits,bb</Item>
+        <Item Name="A (1)"  ExcludeView="sparse">(bits &amp; (1 &lt;&lt; 0)) != 0</Item>
+        <Item Name="B (2)"  ExcludeView="sparse">(bits &amp; (1 &lt;&lt; 1)) != 0</Item>
+        <Item Name="C (4)"  ExcludeView="sparse">(bits &amp; (1 &lt;&lt; 2)) != 0</Item>
+
+        <Item Name="NONE"   IncludeView="sparse" Condition="bits == 0">0</Item>
+        <Item Name="A"      IncludeView="sparse" Condition="bits &amp; (1 &lt;&lt;  0)">bits &amp; (1 &lt;&lt; 0)</Item>
+        <Item Name="B"      IncludeView="sparse" Condition="bits &amp; (1 &lt;&lt;  1)">bits &amp; (1 &lt;&lt; 1)</Item>
+        <Item Name="C"      IncludeView="sparse" Condition="bits &amp; (1 &lt;&lt;  2)">bits &amp; (1 &lt;&lt; 2)</Item>
+      </Expand>
+  </Type>
+</AutoVisualizer>

@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "presentation": {
+        "showReuseMessage": false,
+        "clear":            true,
+    },
+    "problemMatcher": ["$rustc"],
+    "type": "shell",
+    "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+            "RUST_BACKTRACE": "1"
+        },
+    },
+    "tasks": [
+        {
+            "label":    "cargo clean",
+            "command":  "cargo clean",
+        },
+        {
+            "label":    "cargo +stable-x86_64-msvc build",
+            "command":  "cargo +stable-x86_64-msvc build",
+            "group": { "kind": "build", "isDefault": true },
+        },
+        {
+            "label":    "cd crates/example-usage-metabuild && cargo +nightly-x86_64-msvc build",
+            "command":  "cd crates/example-usage-metabuild && cargo +nightly-x86_64-msvc build",
+        },
+    ],
+}

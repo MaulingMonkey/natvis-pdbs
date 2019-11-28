@@ -1,0 +1,15 @@
+# https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[package]
+name = "example-usage-build-rs"
+version = "0.0.0"
+publish = false
+authors = ["MaulingMonkey <git@maulingmonkey.com>"]
+edition = "2018"
+
+[dependencies]
+example-crate-with-natvis = { path = "../example-crate-with-natvis" }
+bugsalot = "0.1.4"
+
+[build-dependencies]
+natvis-pdbs = { path = "../natvis-pdbs" }

@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "crates/natvis-pdbs",
+    "crates/example-crate-with-natvis",
+    "crates/example-usage-build-rs",
+    # "crates/example-usage-build-metabuild", # nightly only
+]
