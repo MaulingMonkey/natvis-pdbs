@@ -1,7 +1,35 @@
+# https://doc.rust-lang.org/cargo/reference/manifest.html
+
 [workspace]
 members = [
-    "crates/natvis-pdbs",
+    ".",
     "crates/example-crate-with-natvis",
     "crates/example-usage-build-rs",
     # "crates/example-usage-build-metabuild", # nightly only
 ]
+
+[package]
+name = "natvis-pdbs"
+version = "1.0.1"
+authors = ["MaulingMonkey <git@maulingmonkey.com>"]
+edition = "2018"
+description = "A metabuild/build.rs compatible crate to embed .natvis debug visualizer files into your executable's .pdbs, for ease of debugging."
+repository = "https://github.com/MaulingMonkey/natvis-pdbs"
+readme = "README.md"
+keywords = ["metabuild", "natvis", "debug"]
+categories = ["development-tools::debugging"]
+license = "MIT OR Apache-2.0"
+include = [
+    "src/*",
+    "Cargo.toml",
+    "LICENSE-APACHE",
+    "LICENSE-MIT",
+    "Readme.md",
+]
+
+[dependencies]
+cargo_metadata = "0.8.2"
+
+[badges]
+appveyor = { repository = "MaulingMonkey/natvis-pdbs", branch = "master", service = "github" }
+maintenance = { status = "passively-maintained" }

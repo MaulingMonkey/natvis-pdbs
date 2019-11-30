@@ -16,5 +16,5 @@ example-crate-with-natvis = { path = "../example-crate-with-natvis" }
 bugsalot = "0.1.4"
 
 [build-dependencies]
-natvis-pdbs = { path = "../natvis-pdbs" }
+natvis-pdbs = { path = "../.." }
 
