@@ -29,11 +29,18 @@ pub fn metabuild() {
 
         let src = root.join("src");
 
-        for dir in [root, src.as_path()].iter() {
+        for (dir,           warn_if_missing ) in [
+            (root,          true            ),
+            (src.as_path(), false           ),
+        ].iter().copied() {
             let entries = if let Ok(e) = fs::read_dir(dir) {
                 e
-            } else {
+            } else if warn_if_missing {
                 println!("cargo:warning={:?} not readable, skipping in search for natvis files...", dir);
+                continue
+            } else {
+                // It is suprisingly common to manually specify the source path to flatten out / not to have a `src` dir
+                // (cloudabi, osmesa-sys, html5ever-atoms, gl_generator, percent-encoding, utf-8, fnv, smallvec, ...)
                 continue
             };
 
