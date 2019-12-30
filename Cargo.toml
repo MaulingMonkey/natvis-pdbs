@@ -10,7 +10,7 @@ members = [
 
 [package]
 name = "natvis-pdbs"
-version = "1.0.1"
+version = "1.0.2"
 authors = ["MaulingMonkey <git@maulingmonkey.com>"]
 edition = "2018"
 description = "A metabuild/build.rs compatible crate to embed .natvis debug visualizer files into your executable's .pdbs, for ease of debugging."
