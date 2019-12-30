@@ -18,8 +18,8 @@
             "command":  "cargo clean",
         },
         {
-            "label":    "cargo +stable-x86_64-msvc build",
-            "command":  "cargo +stable-x86_64-msvc build",
+            "label":    "cargo +1.39.0-x86_64-msvc build",
+            "command":  "cargo +1.39.0-x86_64-msvc build",
             "group": { "kind": "build", "isDefault": true },
         },
         {
