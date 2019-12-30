@@ -13,7 +13,7 @@ metabuild = ["natvis-pdbs"]
 
 [dependencies]
 example-crate-with-natvis = { path = "../example-crate-with-natvis" }
-bugsalot = "0.1.4"
+bugsalot = "0.2.1"
 
 [build-dependencies]
 natvis-pdbs = { path = "../.." }
