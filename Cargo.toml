@@ -28,7 +28,7 @@ include = [
 ]
 
 [dependencies]
-cargo_metadata = "0.9"
+cargo_metadata = "0.10"
 
 [badges]
 appveyor = { repository = "MaulingMonkey/natvis-pdbs", branch = "master", service = "github" }
