@@ -1,19 +1,36 @@
-use cargo_metadata::*;
+use serde::*;
+
 use std::fs;
 use std::ffi::OsString;
+use std::path::*;
+use std::process::*;
+
+
+
+macro_rules! fatal {
+    ( $($tt:tt)* ) => {{
+        eprintln!($($tt)*);
+        std::process::exit(1);
+    }};
+}
+
+#[derive(Deserialize)] struct Metadata { packages: Vec<Package> }
+#[derive(Deserialize)] struct Package { name: String, manifest_path: PathBuf }
 
 pub fn metabuild() {
     if !std::env::var("TARGET").ok().unwrap_or(String::new()).ends_with("-msvc") {
         return; // Not an -msvc target, better not use MSVC specific linker flags.
     }
 
-    let metadata = match MetadataCommand::new().exec() {
-        Ok(md) => md,
-        Err(e) => {
-            eprintln!("natvis-pdbs failed to execute/parse 'cargo metadata': {}", e);
-            std::process::exit(1);
-        },
-    };
+    let output = Command::new("cargo").arg("metadata").arg("--format-version").arg("1").stderr(Stdio::inherit()).output();
+    let output = output.unwrap_or_else(|err| fatal!("natvis-pdbs failed to execute `cargo metadata --format-version 1`: {}", err));
+    match output.status.code() {
+        Some(0) => {},
+        Some(n) => fatal!("`cargo metadata --format-version 1`: exit code {}", n),
+        None    => fatal!("`cargo metadata --format-version 1`: terminated by signal"),
+    }
+
+    let metadata : Metadata = serde_json::from_slice(&output.stdout[..]).unwrap_or_else(|err| fatal!("natvis-pdbs failed to parse `cargo metadata --format-version 1`: {}", err));
 
     println!("cargo:rerun-if-env-changed=LINK");
     let mut link_args = std::env::var_os("LINK").unwrap_or(OsString::new());
