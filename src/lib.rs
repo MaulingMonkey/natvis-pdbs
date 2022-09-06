@@ -46,9 +46,14 @@ pub fn metabuild() {
 
         let src = root.join("src");
 
+        let dm  = root.join("debug_metadata");
+        //  https://github.com/Lokathor/tinyvec/pull/167#issuecomment-1238471549
+        //  https://github.com/bluss/arrayvec/pull/225/files
+
         for (dir,           warn_if_missing ) in [
             (root,          true            ),
             (src.as_path(), false           ),
+            (dm.as_path(),  false           ),
         ].iter().copied() {
             let entries = if let Ok(e) = fs::read_dir(dir) {
                 e

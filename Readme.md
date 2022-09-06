@@ -26,8 +26,12 @@ A [metabuild] / [build.rs] compatible crate to embed `.natvis` debug visualizer 
 
 #### To author crates containing .natvis files \([example](https://github.com/MaulingMonkey/natvis-pdbs/tree/master/crates/example-crate-with-natvis/)\)
 
-Place a natvis files inside the root of your crate, or inside the `src` folder.
-Subdirectories will *not* (currently) be searched.
+Place one or more natvis files inside any of:
+* the root folder of your crate.
+* inside the `{root}\src` folder.
+* inside a `{root}\debug_metadata` folder.
+
+Any other locations (including subdirectories of the above) will *not* (currently) be searched.
 See [Recommended Reading](#recommended-reading) bellow for more information about the .natvis format.
 
 ```xml
