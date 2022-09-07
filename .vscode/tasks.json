@@ -23,6 +23,10 @@
             "group": { "kind": "build", "isDefault": true },
         },
         {
+            "label":    "cargo +stable-x86_64-msvc build",
+            "command":  "cargo +stable-x86_64-msvc build",
+        },
+        {
             "label":    "cd crates/example-usage-metabuild && cargo +nightly-x86_64-msvc build",
             "command":  "cd crates/example-usage-metabuild && cargo +nightly-x86_64-msvc build",
         },
